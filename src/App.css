@@ -1,38 +1,264 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar-light .navbar-nav .nav-link,
+.list-group-item a {
+  color: #aaa;
+}
+.navbar {
+  padding: 25px;
+}
+a {
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a:hover,
+a:active {
+  color: #fafafa !important;
+}
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+body {
+  background: #0e1516;
+  color: #aaa;
+  font-size: 1.25rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: #fff;
+}
+
+button {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  width: 230px;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: 40px 0;
+  margin-right: 20px;
+}
+
+.text-placeholder {
+  border-radius: 5px;
+  width: 200px;
+  height: 20px;
+  flex: 1;
+}
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+} */
+.fixed-top {
+  background-color: #0e1516;
+}
+.home {
+  /* background-color: #210811; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-size: 4.5rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  color: #fff;
+  padding: 0px 10%;
+}
+.home .name {
+  font-size: 6.5rem;
+  margin-bottom: 30px;
+}
+.home font,
+.project font {
+  color: rgb(222, 176, 76);
+}
+.projects,
+.services,
+.about,
+.contact {
+  margin-top: 100px;
+  text-align: center;
+  color: #fff;
+}
+.about {
+  font-size: 1.5rem;
+  width: 58%;
+  margin: 100px auto;
+  text-align: center;
+}
+.contact {
+  width: 100%;
+  text-align: left;
+  margin: 100px auto 0;
+}
+.contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-data {
+  border-left: 1px solid #dfdfdf;
+  padding-left: 40px;
+  display: block;
+}
+.content {
+  display: flex;
+  align-items: center;
+}
+.content p {
+  text-align: justify;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.projects .wrapper,
+.services .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.card {
+  background-color: transparent;
+}
+
+.services {
+  /* background-color: #421023;
+  height: 93vh; */
+}
+.about {
+  /* background-color: #52142c;
+  height: 93vh; */
+}
+.contact {
+  /* background-color: #631834;
+  height: 93vh; */
+}
+.progress-bar-animate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: #fafafa;
+  transform-origin: 0%;
+  z-index: 1050;
+}
+@media (max-width: 1000px) {
+  .home {
+    font-size: 3.5rem;
   }
-  to {
-    transform: rotate(360deg);
+  .home .name {
+    font-size: 5.5rem;
+    margin-bottom: 30px;
   }
+}
+
+@media (max-width: 800px) {
+  .contact-data {
+    border-left: none;
+    margin: 30px 0px;
+    padding: 40px 0px 0px 0px;
+    border-top: 1px solid #fafafa;
+  }
+  .home {
+    font-size: 2.5rem;
+  }
+  .home .name {
+    font-size: 4.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    margin: 100px auto;
+    width: 90%;
+  }
+  .home {
+    font-size: 2.5rem;
+  }
+  .home .name {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+.list-group-item a {
+  color: #000;
+}
+
+.list-group-item:hover {
+  background-color: #0e1516;
+  border: 1px solid #fafafa;
+}
+.list-group-item a:hover,
+.list-group-item:hover a {
+  color: #fafafa;
+}
+.navbar-toggler {
+  background-color: #ffffff;
 }
